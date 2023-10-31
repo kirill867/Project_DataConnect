@@ -1,0 +1,18 @@
+{
+  "admin": [
+    "",
+    "authorization.login_page",
+    "profile.index",
+    "profile.get_sql1"
+  ],
+  "director": [
+    "",
+    "authorization.login_page",
+    "profile.index",
+    "profile.get_sql2"
+  ],
+  "unauthorized": [
+    "",
+    "authorization.login_page"
+  ]
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OUTPUT</title>
+</head>
+<body>
+    <table border="1" width="40%" cellpadding="5" cellspacing="2">
+        {% for item in str %}
+        <tr>
+            {% for key, values in item.items() %}
+                <td>{{values}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/profile/">Вернуться в меню запросов</a>
+</body>
+</html>

@@ -1,0 +1,1 @@
+DELETE FROM box_names WHERE box_id = '$box_id'

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<div align="center">
+    <br><br>
+    <a href="/edit/insert">Добавить вид корбки.</a>
+    <br>
+    <a href="/">Вернуться в главное меню.</a>
+</div>
+
+    <h2 align="center">Все виды коробок и их объёмы.</h2>
+    {% if items %}
+    <div align="center">
+        <table border = 0 width = 50%>
+            {% for head in heads %}
+                <th align = left>{{head}}</th>
+            {% endfor %}
+
+            {% for item in items %}
+                <tr>
+                    <td>{{item['box_name']}}</td>
+                    <td>{{item['volume']}}</td>
+                    <td>
+                        <form action="" method="post">
+                        <input type="hidden" name="box_id" value="{{ item['box_id'] }}">
+                        <input type="submit" name="action" value="удалить">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% else %}
+        <p>Нет доступных товаров</p>
+    {% endif %}
+</body>
+</html>
